@@ -1,83 +1,105 @@
 /* Alap stílusok */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #0a510e;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Vízszintes görgetés kikapcsolása */
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  width: 100%; /* Igazodik a képernyő szélességéhez */
+  max-width: 600px; /* Maximum szélesség nagyobb képernyőkhöz */
+  margin: 0 auto; /* Középre igazítás */
+  padding: 10px; /* Belső margó a széleken */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Tartalom és margók számítása */
+}
+
+label, select, input, button {
+  display: block;
+  width: 100%; /* Minden elem teljes szélességet foglal */
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input, select {
+  box-sizing: border-box; /* Belső margók helyes kezelése */
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f4f4f4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#totalCost {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: center;
+}
+
+/* Reszponzív stílusok */
+
+/* Mobiltelefonokra és kisebb képernyőkre (max. 480px) */
+@media (max-width: 480px) {
   main {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px; /* Csökkentsd a belső margókat */
   }
-  
-  label, select, input, button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 1rem;
+
+  form input, form select, form button {
+    font-size: 0.9rem; /* Csökkentsd a betűméretet */
   }
-  
+
+  label {
+    font-size: 0.85rem; /* Feliratok kisebb méretűek legyenek */
+  }
+
   button {
-    background-color: #166606;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 8px;
   }
-  
-  button:hover {
-    background-color: #a20404;
+}
+
+/* Tabletekhez és közepes képernyőkhöz (max. 768px) */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
   }
-  
-  ul {
-    list-style: none;
-    padding: 0;
+
+  form input, form select, form button {
+    font-size: 1rem; /* Alap méret tableteken */
   }
-  
-  li {
-    background: #f4f4f4;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  #totalCost {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #980606;
-  }
-  
-  /* Reszponzív stílusok */
-  @media (max-width: 768px) {
-    main {
-      width: 90%;
-      padding: 15px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    label, select, input, button {
-      font-size: 0.9rem;
-    }
-  
-    button {
-      padding: 8px;
-    }
-  }
+}
