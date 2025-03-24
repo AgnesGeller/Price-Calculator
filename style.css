@@ -38,12 +38,11 @@ label, select, input, button {
 
 select {
   box-sizing: border-box; /* Pontos méretezés */
-  appearance: none; /* Egységes megjelenés minden böngészőben */
+  appearance: menulist-button; /* Nyilak megjelenítése minden böngészőben */
   cursor: pointer; /* Kattinthatóság biztosítása */
-  background-color: white; /* Fehér háttér */
-  border: 1px solid #ccc; /* Szegély */
+  background-color: white; /* Háttér beállítása */
+  border: 1px solid #ccc;
   border-radius: 5px; /* Szépített sarok */
-  position: relative; /* Nyilak elhelyezésének támogatása */
 }
 
 input {
@@ -99,7 +98,7 @@ li {
     padding: 12px; /* Mobilon nagyobb érintőfelület */
     background-color: white; /* Világos háttér nyilakhoz */
     border: 1px solid #ccc;
-    appearance: none; /* Mobil nyilak megjelenítése */
+    appearance: menulist; /* Mobil nyilak erőltetése */
   }
 
   label {
