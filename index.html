@@ -1,123 +1,43 @@
-/* Alap stílusok */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Vízszintes görgetés kikapcsolása */
-}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kertészeti Ár Kalkulátor</title>
+  <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+  <header>
+    <h1>Kertészeti Ár Kalkulátor</h1>
+  </header>
 
-header {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
+  <main>
+    <form id="calculator">
+      <label for="workType">Munka típusa:</label>
+      <select id="workType">
+        <!-- Opciók dinamikusan generálódnak JavaScript-ből -->
+      </select>
 
-main {
-  width: 100%; /* Igazodik a képernyő szélességéhez */
-  max-width: 600px; /* Maximum szélesség nagyobb képernyőkhöz */
-  margin: 0 auto; /* Középre igazítás */
-  padding: 10px; /* Belső margó a széleken */
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Tartalom és margók számítása */
-}
+      <label for="area">Terület mérete (m²):</label>
+      <input type="number" id="area" placeholder="Adja meg a négyzetmétert" required min="0">
 
-label, select, input, button {
-  display: block;
-  width: 100%; /* Minden elem teljes szélességet foglal */
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 1rem;
-}
+      <label for="count">Darabszám:</label>
+      <input type="number" id="count" placeholder="Adja meg a darabszámot" required min="0">
 
-select {
-  box-sizing: border-box; /* Pontos méretezés */
-  appearance: none; /* Egységes megjelenés minden böngészőben */
-  cursor: pointer; /* Kattinthatóság biztosítása */
-  background-color: white; /* Fehér háttér */
-  border: 1px solid #ccc; /* Szegély */
-  border-radius: 5px; /* Szépített sarok */
-  position: relative; /* Nyilak elhelyezésének támogatása */
-}
+      <button type="button" onclick="addItem()">Kosárba helyezés</button>
+    </form>
 
-input {
-  box-sizing: border-box; /* Pontos méretezés */
-  padding: 10px;
-}
+    <h3>Kiválasztott tételek:</h3>
+    <ul id="itemList"></ul>
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+    <h3>Végösszeg:</h3>
+    <p id="totalCost">0 HUF</p>
+  </main>
 
-button:hover {
-  background-color: #45a049;
-}
+  <footer>
+    <p>&copy; 2025 Kertészeti Weboldal</p>
+  </footer>
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #f4f4f4;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-#totalCost {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4CAF50;
-  text-align: center;
-}
-
-/* Reszponzív stílusok */
-
-/* Mobiltelefonokra és kisebb képernyőkre (max. 480px) */
-@media (max-width: 480px) {
-  main {
-    padding: 5px; /* Csökkentsd a belső margókat */
-  }
-
-  form input, form select, form button {
-    font-size: 0.9rem; /* Csökkentsd a betűméretet */
-  }
-
-  select {
-    padding: 12px; /* Mobilon nagyobb érintőfelület */
-    background-color: white; /* Világos háttér nyilakhoz */
-    border: 1px solid #ccc;
-    appearance: none; /* Mobil nyilak megjelenítése */
-  }
-
-  label {
-    font-size: 0.85rem; /* Feliratok kisebb méretűek legyenek */
-  }
-
-  button {
-    padding: 8px; /* Csökkentett méret a mobilra */
-  }
-}
-
-/* Tabletekhez és közepes képernyőkhöz (max. 768px) */
-@media (max-width: 768px) {
-  main {
-    padding: 15px; /* Kényelmesebb margók tableteken */
-  }
-
-  form input, form select, form button {
-    font-size: 1rem; /* Alap méret tableteken */
-  }
-}
+  <script src="./assests/main.js"></script>
+</body>
+</html>
