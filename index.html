@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kertészeti Ár Kalkulátor</title>
+  <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+  <header>
+    <h1>Kertészeti Ár Kalkulátor</h1>
+  </header>
+
+  <main>
+    <form id="calculator">
+      <label for="workType">Munka típusa:</label>
+      <select id="workType">
+        <!-- Opciók dinamikusan generálódnak JavaScript-ből -->
+      </select>
+
+      <label for="area">Terület mérete (m²):</label>
+      <input type="number" id="area" placeholder="Adja meg a négyzetmétert" required min="0">
+
+      <label for="count">Darabszám:</label>
+      <input type="number" id="count" placeholder="Adja meg a darabszámot" required min="0">
+
+      <button type="button" onclick="addItem()">Kosárba helyezés</button>
+    </form>
+
+    <h3>Kiválasztott tételek:</h3>
+    <ul id="itemList"></ul>
+
+    <h3>Végösszeg:</h3>
+    <p id="totalCost">0 HUF</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kertészeti Weboldal</p>
+  </footer>
+
+  <script src="./assests/main.js"></script>
+</body>
+</html>
