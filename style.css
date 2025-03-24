@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #043d06;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -51,7 +51,7 @@ input {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #610404;
   color: white;
   border: none;
   cursor: pointer;
@@ -59,7 +59,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #ae0404;
 }
 
 ul {
@@ -78,7 +78,7 @@ li {
 #totalCost {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4CAF50;
+  color: #140586;
   text-align: center;
 }
 
